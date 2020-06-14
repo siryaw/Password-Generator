@@ -8,27 +8,44 @@
     <link rel="stylesheet" href="../Password-Generator/assets/css/style.css" />
   </head>
   <body>
-    <div class="wrapper">
-      <header>
+
+    <div class="container"> 
         <h1>Password Generator</h1>
-      </header>
-      <div class="card">
-        <div class="card-header">
-          <h2>Generate a Password</h2>
-        </div>
-        <div class="card-body">
-          <textarea
-            readonly
-            id="password"
-            placeholder="Your Secure Password"
-            aria-label="Generated Password"
-          ></textarea>
-        </div>
-        <div class="card-footer">
-          <button id="generate" class="btn">Generate Password</button>
-        </div>
-      </div>
+        <section>
+            <div class="row">
+                <div class="col-12">
+                    <h3>Generate a Password</h3>
+                </div>
+            </div>
+            <hr>
+           
+            <textarea id="passwordBox" rows="4" placeholder="Your Secure Password"></textarea>
+            <div class="row text-center">
+                <div class="col-sm-3 specialChars">
+                    <input type="checkbox" name="specialChars"checked> !@#$%
+                </div>
+                <div class="col-sm-3">
+                    <input type="checkbox" name="numbers"checked> 0-9
+                </div>
+                <div class="col-sm-3">
+                    <input type="checkbox" name="lwrChars"checked> a-z 
+                </div>
+                <div class="col-sm-3">
+                    <input type="checkbox" name="upprChars"checked> A-Z 
+                </div>
+                
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-6">
+                    <button class="passGenButn" onclick="createPassword()">Generate Password</button>
+                </div>
+                <div class="col-md-6">
+                    <button class="clipboardButn" onclick="copyToClipboard()">Copy to Clipboard</button>
+                </div>
+            </div>
+        </section>
     </div>
-    <script src="../Password-Generator/script.js"></script>
-  </body>
+    <script src="script.js"></script>
+</body>
 </html>
